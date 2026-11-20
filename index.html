@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Монтаж водоснабжения в Донецке: внутренние и наружные работы</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e2a3a;
+      background: #f5f7fa;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      background: #0b2a4a;
+      color: #fff;
+      padding: 20px 0;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .logo span {
+      color: #4fc3f7;
+    }
+    .header-contacts {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    .header-contacts div {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-contacts .label {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .header-contacts .value {
+      font-weight: 600;
+      color: #4fc3f7;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0b2a4a 0%, #1a4a7a 100%);
+      color: #fff;
+      padding: 60px 0 50px;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin-bottom: 15px;
+      opacity: 0.9;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: #4fc3f7;
+      color: #0b2a4a;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .hero ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 40px;
+      margin-top: 25px;
+    }
+    .hero ul li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+    .hero ul li::before {
+      content: "✓";
+      color: #4fc3f7;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #0b2a4a;
+    }
+    .section-subtitle {
+      font-size: 1rem;
+      color: #5a6b7a;
+      margin-bottom: 40px;
+      max-width: 800px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-top: 4px solid #4fc3f7;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    .service-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: #0b2a4a;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: #5a6b7a;
+      margin-bottom: 15px;
+    }
+    .price-placeholder {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0b2a4a;
+      border-top: 1px solid #e0e6ed;
+      padding-top: 12px;
+      margin-top: 5px;
+    }
+    .price-placeholder::after {
+      content: "-";
+      margin-left: 5px;
+      color: #4fc3f7;
+    }
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .approach-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+    .approach-item .num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #4fc3f7;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .approach-item h4 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: #0b2a4a;
+    }
+    .approach-item p {
+      font-size: 0.9rem;
+      color: #5a6b7a;
+    }
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      margin-top: 30px;
+    }
+    .price-table th {
+      background: #0b2a4a;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .price-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid #e8edf2;
+      font-size: 0.92rem;
+    }
+    .price-table tr:last-child td {
+      border-bottom: none;
+    }
+    .price-table .price-col {
+      font-weight: 600;
+      color: #0b2a4a;
+      white-space: nowrap;
+    }
+    .price-table .price-col::after {
+      content: "-";
+      margin-left: 5px;
+      color: #4fc3f7;
+    }
+    .schemes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .scheme-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .scheme-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #0b2a4a;
+    }
+    .scheme-card p {
+      font-size: 0.92rem;
+      color: #5a6b7a;
+    }
+    .order-block {
+      background: #0b2a4a;
+      color: #fff;
+      border-radius: 16px;
+      padding: 50px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .order-block h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+    .order-block p {
+      opacity: 0.85;
+      max-width: 500px;
+      font-size: 0.95rem;
+    }
+    .order-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 1rem;
+    }
+    .order-contacts .label {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .order-contacts .value {
+      font-weight: 600;
+      color: #4fc3f7;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .team-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      font-weight: 600;
+      color: #0b2a4a;
+      font-size: 0.95rem;
+    }
+    .guarantees-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .guarantee-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #fff;
+      padding: 18px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .guarantee-item::before {
+      content: "✓";
+      color: #4fc3f7;
+      font-weight: 700;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .guarantee-item span {
+      font-size: 0.9rem;
+      color: #1e2a3a;
+    }
+    .tech-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .tech-step {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      border-left: 4px solid #4fc3f7;
+    }
+    .tech-step .step-num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #4fc3f7;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .tech-step h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #0b2a4a;
+    }
+    .tech-step p {
+      font-size: 0.88rem;
+      color: #5a6b7a;
+    }
+    .faq-list {
+      margin-top: 30px;
+    }
+    .faq-item {
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 18px 25px;
+      font-weight: 600;
+      color: #0b2a4a;
+      font-size: 0.95rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: #4fc3f7;
+      font-weight: 400;
+    }
+    .faq-answer {
+      padding: 0 25px 18px;
+      font-size: 0.9rem;
+      color: #5a6b7a;
+    }
+    footer {
+      background: #0b2a4a;
+      color: #fff;
+      padding: 40px 0 25px;
+      margin-top: 60px;
+    }
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    footer .footer-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    footer .footer-col .label {
+      font-size: 0.75rem;
+      opacity: 0.6;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    footer .footer-col .value {
+      font-weight: 500;
+      color: #4fc3f7;
+    }
+    footer .copy {
+      width: 100%;
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.7rem; }
+      .section-title { font-size: 1.5rem; }
+      .order-block { padding: 30px 20px; }
+      .header-contacts { gap: 15px; font-size: 0.85rem; }
+      .logo { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">ОТОПЛЕНИЕ <span>ДОНЕЦК</span></div>
+    <div class="header-contacts">
+      <div>
+        <span class="label">Адрес</span>
+        <span class="value">место для адреса</span>
+      </div>
+      <div>
+        <span class="label">Телефон</span>
+        <span class="value">место для телефона</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="badge">Бесплатно: выезд, замер и смета</span>
+    <h1>Монтаж водоснабжения в Донецке: внутренние и наружные работы</h1>
+    <p>Делаем разводку по точкам ХВС и ГВС внутри помещения. Устанавливаем системы водопровода от скважины, колодца или центральных сетей под ключ.</p>
+    <p>Работаем с физическими и юридическими лицами. Смета и договор с фиксированной стоимостью. Подбор оборудования без переплат - под расход и давление.</p>
+    <ul>
+      <li>Понятная технология: этапы, сроки, контроль</li>
+      <li>Гарантия на работы до 3 лет</li>
+      <li>Оплата по этапам</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Услуги по устройству водоснабжения и водопровода</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Ввод воды из скважины в дом</h3>
+        <p>Ввод воды от готовой скважины до ввода в дом. Подбираем и ставим погружной насос, собираем автоматику и гидроаккумулятор, делаем кессон или адаптер, прокладываем ПНД-трубу по участку.</p>
+        <div class="price-placeholder">от -</div>
+      </div>
+      <div class="service-card">
+        <h3>Ввод воды из колодца в дом</h3>
+        <p>Водоснабжение от колодца до ввода в дом. Ставим насос или насосную станцию, настраиваем давление, подключаем гидробак. Наружную трассу прокладываем в грунте.</p>
+        <div class="price-placeholder">от -</div>
+      </div>
+      <div class="service-card">
+        <h3>Ввод воды от центрального водопровода</h3>
+        <p>Подключение к магистрали до ввода в дом. Делаем врезку, прокладываем ввод, собираем водомерный узел со счётчиком и запорной арматурой.</p>
+        <div class="price-placeholder">от -</div>
+      </div>
+      <div class="service-card">
+        <h3>Внутренняя разводка водопровода</h3>
+        <p>Разводка ХВС и ГВС от ввода до точек водоразбора. Коллекторная или тройниковая схема, фильтр грубой очистки, запорные краны, коллекторы.</p>
+        <div class="price-placeholder">от -</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#eef2f7;">
+  <div class="container">
+    <h2 class="section-title">Ответственный подход</h2>
+    <p class="section-subtitle">Гидравлическая схема даёт стабильное давление в точках и понятную работу автоматики. Инженер считает расход, подбирает насос и диаметр труб, чтобы вода не «проседала» при одновременном включении душа, кухни и стиральной машины.</p>
+    <div class="approach-grid">
+      <div class="approach-item">
+        <div class="num">01</div>
+        <h4>Проектирование и гидравлические расчеты</h4>
+        <p>Выполняем инженерные расчеты с определением диаметров трубопроводов и подбором насосного оборудования оптимальной производительности.</p>
+      </div>
+      <div class="approach-item">
+        <div class="num">02</div>
+        <h4>Разводка ХВС и ГВС по точкам потребления</h4>
+        <p>Монтируем внутренние системы холодного и горячего водоснабжения с применением полипропиленовых и металлопластиковых труб.</p>
+      </div>
+      <div class="approach-item">
+        <div class="num">03</div>
+        <h4>Замена насосов в скважинах</h4>
+        <p>Выполняем подъем, диагностику и замену погружных насосов в действующих скважинах. Устанавливаем новые насосы с повышенной производительностью.</p>
+      </div>
+      <div class="approach-item">
+        <div class="num">04</div>
+        <h4>Системы водоподготовки и очистки</h4>
+        <p>Подбираем и устанавливаем фильтры механической очистки, станции обезжелезивания и умягчения, ультрафиолетовые обеззараживатели.</p>
+      </div>
+      <div class="approach-item">
+        <div class="num">05</div>
+        <h4>Автоматизация и зимняя эксплуатация</h4>
+        <p>Комплектуем системы реле давления, частотными преобразователями, блоками управления. Применяем греющие кабели и теплоизоляцию.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Цены на монтаж водоснабжения в Донецке</h2>
+    <p class="section-subtitle">Цены указаны ориентировочно. Итог зависит от источника воды, длины трассы, количества точек водоразбора и способа прокладки труб.</p>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Работа</th>
+          <th>Ед.</th>
+          <th>Цена</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Выезд, замер и составление сметы</td><td>выезд</td><td class="price-col">от -</td></tr>
+        <tr><td>Инженерная схема водоснабжения (ХВС/ГВС) с привязкой точек</td><td>проект</td><td class="price-col">от -</td></tr>
+        <tr><td>Подбор насоса, автоматики и диаметров труб под ваш расход</td><td>услуга</td><td class="price-col">от -</td></tr>
+        <tr><td>Разработка траншеи под водопровод</td><td>м.п.</td><td class="price-col">от -</td></tr>
+        <tr><td>Прокладка ПНД-трубы в грунте (Ø25–32)</td><td>м.п.</td><td class="price-col">от -</td></tr>
+        <tr><td>Утепление наружного трубопровода</td><td>м.п.</td><td class="price-col">от -</td></tr>
+        <tr><td>Монтаж греющего кабеля на ввод</td><td>м.п.</td><td class="price-col">от -</td></tr>
+        <tr><td>Проход через фундамент под ввод</td><td>шт.</td><td class="price-col">от -</td></tr>
+        <tr><td>Монтаж кессона для скважины</td><td>шт.</td><td class="price-col">от -</td></tr>
+        <tr><td>Установка скважинного адаптера с обвязкой</td><td>шт.</td><td class="price-col">от -</td></tr>
+        <tr><td>Врезка в центральный водопровод</td><td>шт.</td><td class="price-col">от -</td></tr>
+        <tr><td>Монтаж погружного скважинного насоса</td><td>шт.</td><td class="price-col">от -</td></tr>
+        <tr><td>Монтаж насосной станции</td><td>шт.</td><td class="price-col">от -</td></tr>
+        <tr><td>Установка гидроаккумулятора 50–100 л</td><td>шт.</td><td class="price-col">от -</td></tr>
+        <tr><td>Сборка узла автоматики</td><td>компл.</td><td class="price-col">от -</td></tr>
+        <tr><td>Установка фильтра грубой очистки на ввод</td><td>шт.</td><td class="price-col">от -</td></tr>
+        <tr><td>Монтаж редуктора давления до Ø32</td><td>шт.</td><td class="price-col">от -</td></tr>
+        <tr><td>Сборка узла ввода с запорной арматурой</td><td>компл.</td><td class="price-col">от -</td></tr>
+        <tr><td>Монтаж водомерного узла со счетчиком</td><td>компл.</td><td class="price-col">от -</td></tr>
+        <tr><td>Прокладка труб (PPR/PEX/металлопласт) открытым способом</td><td>м.п.</td><td class="price-col">от -</td></tr>
+        <tr><td>Прокладка труб в штробе</td><td>м.п.</td><td class="price-col">от -</td></tr>
+        <tr><td>Вывод под точку воды</td><td>точка</td><td class="price-col">от -</td></tr>
+        <tr><td>Монтаж коллектора</td><td>шт.</td><td class="price-col">от -</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section" style="background:#eef2f7;">
+  <div class="container">
+    <h2 class="section-title">Портфолио результатов нашей работы в частных домах и коттеджах по ДНР</h2>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Схемы разводки воды</h2>
+    <div class="schemes">
+      <div class="scheme-card">
+        <h4>Тройниковая</h4>
+        <p>Тройниковая схема подходит для небольших домов и дач. Она дешевле по материалам и быстрее в монтаже, но чувствительнее к одновременному расходу воды. Мы подскажем, что будет разумнее именно под вашу планировку и режим.</p>
+      </div>
+      <div class="scheme-card">
+        <h4>Коллекторная</h4>
+        <p>Коллекторная схема даёт ровное давление и удобную настройку: каждая линия перекрывается отдельно, проще обслуживать и модернизировать систему. Такой вариант часто выбирают для объектов с несколькими санузлами и большим количеством точек.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#eef2f7;">
+  <div class="container">
+    <h2 class="section-title">Как заказать монтаж водопровода в доме</h2>
+    <p class="section-subtitle">Просто свяжитесь с нами. Изучим ваш объект и ситуацию, предложим оптимальное решение, подберем оборудование и выполним расчет стоимости.</p>
+    <div class="order-block">
+      <div>
+        <h3>Получите бесплатную консультацию и расчет</h3>
+        <p>Расскажем все об инженерных системах. Выслушаем ваши пожелания. Подберем оптимальный материал и оборудование.</p>
+      </div>
+      <div class="order-contacts">
+        <div>
+          <span class="label">Режим работы</span>
+          <span class="value">Пн–Вс с 09:00 до 18:00</span>
+        </div>
+        <div>
+          <span class="label">Телефон</span>
+          <span class="value">место для телефона</span>
+        </div>
+        <div>
+          <span class="label">Адрес</span>
+          <span class="value">место для адреса</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Бригада по монтажу водоснабжения для дома и бизнеса</h2>
+    <p class="section-subtitle">Каждый мастер имеет профильное образование и опыт. Работаем слаженно, соблюдаем технологию и сроки.</p>
+    <div class="team-grid">
+      <div class="team-item">01 Частные дома и коттеджи</div>
+      <div class="team-item">02 Водопроводы для квартир</div>
+      <div class="team-item">03 Коммерческие объекты</div>
+      <div class="team-item">04 Промышленные объекты</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#eef2f7;">
+  <div class="container">
+    <h2 class="section-title">Понятные условия и аккуратный монтаж без сюрпризов</h2>
+    <div class="guarantees-grid">
+      <div class="guarantee-item"><span>Гарантия на работы до 3 лет, условия прописаны в договоре</span></div>
+      <div class="guarantee-item"><span>Смета фиксируется до старта работ, оплата по этапам</span></div>
+      <div class="guarantee-item"><span>Подбор насоса и автоматики под ваш расход и давление</span></div>
+      <div class="guarantee-item"><span>Аккуратная прокладка труб и понятная маркировка линий</span></div>
+      <div class="guarantee-item"><span>Опрессовка и проверка системы перед сдачей</span></div>
+      <div class="guarantee-item"><span>Консультация по эксплуатации и обслуживанию после запуска</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Технология монтажа водоснабжения</h2>
+    <div class="tech-steps">
+      <div class="tech-step">
+        <div class="step-num">1</div>
+        <h4>Обследование и проектирование</h4>
+        <p>Выезд специалиста на объект, обследование источника водоснабжения, гидравлические расчеты, составление технического решения с детальной сметой и фиксированной стоимостью.</p>
+      </div>
+      <div class="tech-step">
+        <div class="step-num">2</div>
+        <h4>Подготовительные работы и поставка материалов</h4>
+        <p>Заключение договора, закупка насосного оборудования и материалов у официальных дилеров, доставка на объект, подготовка площадки и земляные работы.</p>
+      </div>
+      <div class="tech-step">
+        <div class="step-num">3</div>
+        <h4>Монтаж наружных и внутренних сетей</h4>
+        <p>Установка насосного оборудования и автоматики, прокладка наружного водопровода с утеплением, монтаж внутренней разводки ХВС и ГВС, подключение точек водоразбора.</p>
+      </div>
+      <div class="tech-step">
+        <div class="step-num">4</div>
+        <h4>Пусконаладка и ввод в эксплуатацию</h4>
+        <p>Гидравлические испытания под рабочим давлением, настройка автоматики, заполнение системы водой, инструктаж по эксплуатации и сдача объекта с гарантиями.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#eef2f7;">
+  <div class="container">
+    <h2 class="section-title">Популярные вопросы об устройстве водопровода</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">Сколько времени занимает монтаж автономного водоснабжения частного дома?</div>
+        <div class="faq-answer">Установка системы водоснабжения из скважины или колодца с внутренней разводкой ХВС и ГВС занимает 2–4 рабочих дня в зависимости от сложности объекта и количества точек водоразбора. Подключение к центральному водопроводу выполняется за 1–2 дня после получения технических условий. Сроки фиксируем в договоре и строго соблюдаем.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Почему падает давление воды в доме и как это исправить?</div>
+        <div class="faq-answer">Причины могут быть разные: засорение фильтров, неисправность насоса, утечки в системе, маленький объем гидроаккумулятора. Проводим диагностику, чистим фильтры, при необходимости меняем насос на более мощный или увеличиваем объем накопительного бака.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Какие трубы использовать для внутренней разводки водопровода по дому?</div>
+        <div class="faq-answer">Для системы холодного водоснабжения применяем полипропиленовые трубы PN10 диаметром 20–32 мм, для горячей воды - армированные стекловолокном PN20. При коллекторной разводке используем металлопластиковые трубы 16–20 мм с надежными пресс-фитингами. Все соединения выполняем сваркой или опрессовкой для максимальной герметичности.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Что входит в стоимость монтажа водоснабжения под ключ?</div>
+        <div class="faq-answer">Смета включает работы по этапам: обследование, монтаж наружной трассы и ввода, узел автоматики, внутренняя разводка ХВС/ГВС, опрессовка и запуск. Материалы и оборудование считаем отдельно по списку и фиксируем в смете до начала работ. Закупку можем взять на себя, чтобы вы не тратили время на подбор и доставку.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Какой тип насосного оборудования лучше выбрать для водоснабжения дачи?</div>
+        <div class="faq-answer">Для скважин глубиной до 30 метров оптимальны погружные насосы типа «Водомет», Grundfos SQ или Джилекс Водомет. Для артезианских скважин используем насосы ЭЦВ повышенной производительности. При организации водоснабжения из колодца рекомендуем поверхностные насосные станции с мембранным гидроаккумулятором объемом 50–100 литров.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Как защитить трубы водопровода от промерзания зимой?</div>
+        <div class="faq-answer">Наружные трубопроводы прокладываем ниже глубины промерзания грунта (1–1,2 метра в нашем климате), обязательно устанавливаем саморегулирующийся греющий кабель на участках ввода в дом и в местах подъема труб. Насосное оборудование размещаем в утепленном кессоне или приямке. Для сезонных систем предусматриваем узлы полного слива воды на зимний период.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Можно ли модернизировать существующую систему водоснабжения для увеличения давления?</div>
+        <div class="faq-answer">Да, устанавливаем повысительные насосные станции или частотные преобразователи для плавного регулирования давления. Также можем увеличить объем гидроаккумулятора, заменить насос на более производительный или добавить дополнительный напорный бак. Проводим диагностику системы и предлагаем оптимальное решение.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">В каких районах ДНР вы выполняете монтаж систем водоснабжения?</div>
+        <div class="faq-answer">Работаем по всей территории Донецкой Народной Республики. Выезжаем в Донецк, Макеевку, Горловку, Енакиево, Харцызск, Торез, Снежное, Мариуполь, Ясиноватую и другие населенные пункты. Доставка материалов собственным транспортом и выезд монтажной бригады включены в стоимость при заказе водоснабжения под ключ.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-col">
+      <span class="label">Организация</span>
+      <span class="value">ОТОПЛЕНИЕ/ВОДА ДОНЕЦК</span>
+    </div>
+    <div class="footer-col">
+      <span class="label">Адрес</span>
+      <span class="value">место для адреса</span>
+    </div>
+    <div class="footer-col">
+      <span class="label">Телефон</span>
+      <span class="value">место для телефона</span>
+    </div>
+    <div class="footer-col">
+      <span class="label">Режим работы</span>
+      <span class="value">Пн–Вс с 09:00 до 18:00</span>
+    </div>
+    <div class="copy">Монтаж водоснабжения в Донецке и ДНР</div>
+  </div>
+</footer>
+
+</body>
+</html>
