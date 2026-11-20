@@ -1,2 +1,1 @@
-# voda24-7dnr
-voda24-7dnr.ru
+link! voda24-7dnr.ru
